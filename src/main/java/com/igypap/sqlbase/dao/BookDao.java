@@ -2,6 +2,7 @@ package com.igypap.sqlbase.dao;
 
 import com.igypap.sqlbase.domain.Book;
 
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -10,5 +11,5 @@ import java.util.List;
 public interface BookDao {
     void addBook(Book book);
     void removeBook(Book book);
-    List<Book> getAll();
+    List<Book> getAll() throws SQLException;
 }
