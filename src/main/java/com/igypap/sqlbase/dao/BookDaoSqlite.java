@@ -6,8 +6,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.R;
-
 
 /**
  * Created by igypap on 27.11.16.
@@ -99,8 +97,8 @@ public class BookDaoSqlite implements BookDao {
             e.printStackTrace();
         }
         List<Book> books = new ArrayList<Book>();
-        while(resultSet.next()){
-            books.add(new Book(resultSet.getString("author"),resultSet.getString("title"),resultSet.getInt("pages")));
+        while (resultSet.next()) {
+            books.add(new Book(resultSet.getString("author"), resultSet.getString("title"), resultSet.getInt("pages")));
         }
         return books;
 
